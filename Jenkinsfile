@@ -7,5 +7,7 @@ node {
   def img = docker.build('micks80/docker-wordpress-nginx:latest', '.')
 
   stage 'Publish'
-
+  docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+     img.push('latest')
+  }
 }
