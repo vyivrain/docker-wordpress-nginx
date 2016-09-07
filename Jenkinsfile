@@ -1,10 +1,10 @@
 node {
     
   stage 'Checkout'
-  git 'https://github.com/micks80/docker-wordpress-nginx.git'
+  git 'https://github.com/vyivrain/docker-wordpress-nginx.git'
   
   stage 'Package Docker image'
-  def img = docker.build('dockpress/docker-wordpress-nginx:latest', '.')
+  def img = docker.build('vyivrain/docker-wordpress-nginx:latest', '.')
 
   stage 'Publish'
   docker.withRegistry('https://registry.hub.docker.com', 'docker-psy') {
