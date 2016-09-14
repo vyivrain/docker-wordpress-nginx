@@ -9,7 +9,6 @@ node {
   stage 'Publish'
   println "'${env.branch_name}'"
   sh 'env | sort'
-// 12345
 //   docker.withRegistry('https://registry.hub.docker.com', 'docker-psy') {
 //      img.push('latest')
 //   }
