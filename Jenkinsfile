@@ -7,5 +7,4 @@ node {
 
   stage 'Publish'
   println "'${env.branch_name}'"
-  sh 'env'
 }
